@@ -1,16 +1,17 @@
 from __future__ import print_function
 import pickle
 import os.path
-import io
 from googleapiclient.discovery import build
-from googleapiclient.http import MediaIoBaseDownload
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
 
-def getSignatures():
+def main():
+    """Shows basic usage of the Drive v3 API.
+    Prints the names and ids of the first 10 files the user has access to.
+    """
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -30,20 +31,19 @@ def getSignatures():
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
-    drive_service = build('drive', 'v3', credentials=creds)
+    service = build('drive', 'v3', credentials=creds)
 
-    with open("googleDriveFileID.txt", "r") as f:
-        file_id = f.read().strip()
+    # Call the Drive v3 API
+    results = service.files().list(
+        pageSize=10, fields="nextPageToken, files(id, name)").execute()
+    items = results.get('files', [])
 
-    request = drive_service.files().export_media(fileId=file_id,
-                                                 mimeType='text/csv')
-    fh = open("FUSD Mental Health Petition (Responses).csv", "wb")
-    downloader = MediaIoBaseDownload(fh, request)
-    done = False
-    while done is False:
-        status, done = downloader.next_chunk()
-        print(status)
-        print("Download %d%%." % int(status.progress() * 100))
+    if not items:
+        print('No files found.')
+    else:
+        print('Files:')
+        for item in items:
+            print(u'{0} ({1})'.format(item['name'], item['id']))
 
 if __name__ == '__main__':
-    getSignatures()
+    main()

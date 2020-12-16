@@ -1,175 +1,226 @@
 <!DOCTYPE html>
 <html>
-  <title>FUSD: Anti-Racism Now</title>
-  <meta property="og:url"                content="https://fusdantiracism.github.io/" />
-  <meta property="og:title"              content="FUSD: Anti-Racism Now" />
-  <meta property="og:description"        content="Sign this petition for FUSD to incorporate anti-racist practices into their PreK-12 program!" />
-  <meta property="og:image"              content="https://fusdantiracism.github.io/fist.png" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+<title>FUSD Mental Health Petition</title>
+<meta property="og:url"                content="https://fusdmentalhealth.github.io/" />
+<meta property="og:title"              content="FUSD Mental Health Petition" />
+<meta property="og:description"        content="Sign this petition for FUSD to implement greater mental health resources!" />
+<meta property="og:image"              content="https://fusdmentalhealth.github.io/brain.jpg" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-  body, html {
-    height: 100%;
-    line-height: 1.8;
-  }
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  th, td {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
+th, td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
 
-  p, li {
-    font-size: 14pt;
-  }
+p, li {
+  font-size: 14pt;
+}
 
-  ol.main-points li {
-    margin-bottom: 20px;
-  }
+ol.main-points li {
+  margin-bottom: 20px;
+}
 
-  ol.sub-points li {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
+ol.sub-points li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
-  b {
-    font-weight: ;
-  }
+b {
+  font-weight: ;
+}
 
-  .share-bar {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 12px;
-  }
+.share-bar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 12px;
+}
 
-  .IN-widget {
-    margin-left: 12px !important;
-    transform: scale(1.4);
-  }
+.IN-widget {
+  margin-left: 12px !important;
+  transform: scale(1.4);
+}
 
-  h1, h2, h3, h4 {
-    font-weight: bold;
-  }
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
 
-  #tooltip {
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 13px;
-  }
+#tooltip {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
 
-  /* Box-sizing reset: //w3bits.com/?p=3225 */
-  html {
-    box-sizing: border-box;
-  }
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  /* The Comments Container */
-  .comments-container {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-    grid-auto-rows: 20px;
-  }
+/* The Comments Container */
+.comments-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-auto-rows: 20px;
+}
 
-  /* The comment */
-  .comment-box .container {
-    background: #fff;
-    color: black;
-    padding: 1em;
-    margin: 5px;
-    max-width: 300px;
-    text-align: left;
-  }
-  small.byline {
-    font-weight: bold;
-  };
+/* The comment */
+.comment-box .container {
+  background: #fff;
+  color: black;
+  padding: 1em;
+  margin: 5px;
+  max-width: 300px;
+  text-align: left;
+}
+small.byline {
+  font-weight: bold;
+};
 
-  </style>
-  <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="nLaomXZR"></script>
+</style>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="nLaomXZR"></script>
 
-    <!-- Header with full-height image -->
-    <header class="w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-center w3-text-white" style="padding:128px; background-image: url(https://fusdantiracism.github.io/fist.png); background-size: cover; width: 100%; background-position: center">
-        <span class="w3-jumbo w3-hide-small">FUSD: <b>Anti-Racism Now</b></span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">FUSD: Teach <b>Anti-Racism Now</b></span><br>
-        <a href="#petition"><button class="w3-btn w3-round-xxlarge w3-white w3-large" style="margin-right: 10px">Read the Petition</button></a>
-        <a href="#sign"><button class="w3-btn w3-round-xxlarge w3-black w3-large">Sign the Petition</button></a>
-        <!-- <a href="#comments"><button class="w3-btn w3-round-xxlarge w3-white w3-large" style="margin-right: 10px">Read the Comments</button></a> -->
-        <div class="share-bar">
-          <div class="fb-share-button" data-href="https://bit.ly/fusdantiracism" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdantiracism&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-          &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition asking FUSD to incorporate anti-racism education into their K-12 curriculum!" data-url="https://bit.ly/fusdantiracism" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
-          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-          <script type="IN/Share" data-url="https://bit.ly/fusdantiracism"></script>
-        </div>
+  <!-- Header with full-height image -->
+  <header class="w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-center w3-text-white" style="padding:128px; background-image: url(https://fusdmentalhealth.github.io/brain_gray.jpg); background-size: cover; width: 100%; background-position: center">
+      <span class="w3-jumbo w3-hide-small">FUSD <b>Mental Health Petition</b></span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">FUSD <b>Mental Health Petition</b></span><br>
+      <a href="#petition"><button class="w3-btn w3-round-xxlarge w3-white w3-large" style="margin-right: 10px">Read the Petition</button></a>
+      <a href="#sign"><button class="w3-btn w3-round-xxlarge w3-black w3-large">Sign the Petition</button></a>
+      <!-- <a href="#comments"><button class="w3-btn w3-round-xxlarge w3-white w3-large" style="margin-right: 10px">Read the Comments</button></a> -->
+      <div class="share-bar">
+        <div class="fb-share-button" data-href="https://bit.ly/fusdstrong" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdstrong&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition for FUSD to implement greater mental health resources!" data-url="https://bit.ly/fusdstrong" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+        <script type="IN/Share" data-url="https://bit.ly/fusdstrong"></script>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <div class="w3-containercenter" style="max-width: 950px; width: 95%; margin: 0 auto; margin-top:48px; " id="petition">
-      <h2 class="w3-center">A Letter From Concerned Students, Teachers, Alumni, Parents, and Community Members</h2>
-      <div >
+  <!-- About Section -->
+  <div class="w3-containercenter" style="max-width: 950px; width: 95%; margin: 0 auto; margin-top:48px; " id="petition">
+    <!-- <h2 class="w3-center">A Letter From Students, Alumni, Educators, Parents, and Community Members</h2> -->
+    <div >
 
-        <p><b>To:</b> <i>Fremont Board of Education President Desrie Campbell; Board of Education Members Larry Sweeney, Ann Crosbie, Dianne Jones, Michele Berke, and Student Member Zayaan Khan; and Fremont Unified School District Superintendent Christopher "CJ" Cammack</i></p>
+      <p><i>In an effort to reform our schools and improve the well-being of FUSD students, GENup Fremont has undergone extensive research to compile a list of mental health recommendations for the district to adopt. These recommendations will be formally presented to key stakeholders at our Mental Health Town Hall meeting on Sunday, January 3rd, which you can register for at <b><a href="https://bit.ly/mhth-reg" target="_blank">bit.ly/mhth-reg</a></b>. </i></p>
 
-        <p>The senseless murders of George Floyd, Ahmaud Arbery, Breonna Taylor, Elijah McClain,Tony McDade, Trayvon Martin, and countless other Black folks have shocked the nation. These murders have reaffirmed the reality that systemic racism exists in every community. These murders remind us that we all must commit to being actively anti-racist in order to dismantle the centuries of systemic racism that continue to oppress our Black, Indigenous, and People of Color (BIPOC) communities.</p>
+      <p><b>December 16th, 2020</b></p>
 
-        <p>We are a concerned group of Fremont Unified School District (FUSD) students, teachers, alumni, parents, and community members. We recognize that systemic racism is a reality in FUSD schools. Although <a href="https://www.publicschoolreview.com/california/fremont-unified-school-district/614400-school-district" target="_blank">89%</a> of FUSD students are non-White, only <a href="http://www.ed-data.org/ShareData/Html/38523" target="_blank">34%</a> of FUSD teachers are non-White. Only <i>one</i> of FUSD’s <a href="https://www.face.edu/cms/lib/CA01000848/Centricity/Domain/5132/AdoptedCoreNovels%202017-18.pdf" target="_blank">Grades 7-12 core novels</a> (5%) is written by a non-White author. Black students in FUSD are <a href="https://projects.propublica.org/miseducation/district/0614400" target="_blank">3.4 times as likely</a> as White students to get suspended. These racial inequities in our educators, curriculum, and disciplinary actions actively harm BIPOC community members by perpetuating systemic oppression within our educational environments.</p>
+      <p><b>Dear Fremont Board of Education President Larry Sweeney; Board of Education Members Desrie Campbell, Dianne Jones, Vivek Prasad, Yajing Zhang, and Student Member Zayaan Khan; Fremont Unified School District Superintendent Christopher "CJ" Cammack and Assistant Superintendent Leticia Salinas,</b></p>
 
-        <p>One of the most sustainable ways to enact structural change is through education. As an educational community, we must commit to learning and teaching the realities of race and systemic racism in America, California, and Fremont. We must additionally actively embody anti-racist principles for ourselves and our students. Towards that end, we strongly request that FUSD takes the following steps to integrate anti-racist practices throughout all grade levels and academic subjects of their PreK-12 curriculum:</p>
 
-        <ol class="main-points">
-          <li><b>Form a diverse committee of students, teachers, parents, alumni, and community members to oversee the process of integrating anti-racist practices in FUSD.</b> Committee members must represent every attendance area and span the PreK-12 grade spectrum. In the spirit of transparency and accountability, the committee must release plans, timelines, and progress on accomplishing the following points with the greater Fremont community.</li>
-          <li><b>Foster a district of active anti-racist educators.</b> Students look to administrators, teachers, and staff as role models. Unfortunately, that is difficult in FUSD because educators either do not share students’ cultural experiences or lack the training to engage with students on issues of race. Therefore, we ask that FUSD:
-            <ol type="a" class="sub-points">
-              <li><b>Diversify new hires,</b> pursuant to applicable laws. We would like FUSD’s new hires for principals, teachers, counselors, and other academic staff to reflect the demographics of the community, implemented in a phased approach beginning in the 2021-22 school year.</li>
-              <li><b>Actively recruit at Historically Black Colleges and Universities (HBCUs) and Hispanic-Serving Institutions (HSIs)</b> and other institutions with a high proportion of BIPOCs.</li>
-              <li><b>Incorporate social justice frameworks into the hiring process.</b> This includes diversifying hiring committees and including an applicant's commitment to social justice as an evaluating metric.</li>
-              <li><b>Mandate yearly social justice professional development</b> including topics such as culturally relevant pedagogy and anti-racist teaching approaches.</li>
-            </ol>
-          </li>
-          <li><b>Diversify curricular content.</b> All courses must include more content by BIPOC creators across the gender spectrum and must actively educate students about the realities of race and racism in America, past and present. Specifically, we ask that FUSD:
-            <ol type="a" class="sub-points">
-              <li><b>Diversify the books read in English classes</b> to reflect the demographics of our city, state and nation. At least half of the books assigned in each English class should be written by non-White, and particularly BIPOC, authors, implemented in a phased approach beginning in the 2021-22 school year.</li>
-              <li><b>Implement and require an Ethnic Studies curriculum</b> using critical pedagogy. Critical pedagogy is a way of teaching that helps students challenge dominant narratives and practices. Ethnic Studies “<a href="https://ethnicstudies.berkeley.edu/" target="_blank">is the critical and interdisciplinary study of race, ethnicity, and indigeneity with a focus on the experiences and perspectives of people of color within and beyond the United States</a>.”</li>
-              <li><b>Embed anti-racist pedagogies in all subjects.</b> Anti-racism should not be siloed into only one class. To deconstruct the norm of whiteness that has been embedded into our curriculum, we must actively inject anti-racist perspectives into all academic subjects. Community-compiled examples and resources are listed <a href="https://docs.google.com/document/d/1gbxrvhR0eJyJXcW7CNHmIYXXTvj47Dbev_SAzhjo0xo/edit?usp=sharing" target="_blank">here</a>.</li>
-              <li><b>Re-evaluate the community service requirement</b> to incorporate principles of social justice and anti-racism, and to move from a savior mentality to addressing systemic oppression.</li>
-            </ol>
-          </li>
-          <li><b>Reduce harshly punitive outcomes for BIPOC students.</b> American schools are well-known to perpetuate a school-to-prison pipeline that disproportionately disciplines and alienates BIPOC students. FUSD is no exception, with Black students being <a href="https://projects.propublica.org/miseducation/district/0614400" target="_blank">3.4 times as likely</a> as White students to get suspended. Therefore, we ask that FUSD:
-            <ol type="a" class="sub-points">
-              <li><b>Remove Fremont Police officers (“School Resource Officers”) from FUSD schools and instead invest in programs that promote racial equity,</b> including restorative and transformative justice, counseling services, child care, and afterschool programs.</li>
-              <li><b>End zero-tolerance policies that promote suspensions and expulsions.</b> These policies disproportionately discipline BIPOC students, increasing the probability of entrance into the carceral system.</li>
-              <li><b>Investigate the racial gap in disciplinary action</b> and publicly release the causes of that gap as well as concrete steps the district is taking to address it.</li>
-            </ol>
-          </li>
+      <p>Mental health is one of the foremost issues impacting students in the 21st century. Students face high levels of depression and anxiety, and these issues are only being exacerbated through the duration of the COVID-19 pandemic. </p>
+
+      <p>We recognize the challenges in implementation, given the district’s pending budget cuts, and we appreciate the School Board’s decision on November 12, 2020 to commit to re-investing its $838,000 contribution to the school policing program into mental health support. We urge the district to take further responsibility in prioritizing proactive and preventative solutions to these issues, rather than relying on reactive ones (i.e. 5150s), and as such, ask the district to comply with the following recommendations:</p>
+
+      <p><b>STEP ONE: Hiring Staff / Training</b></p>
+
+      <ol class="main-points">
+        <li>The district should hire staff to gradually meet the professionally recommended ratios for counselors, school psychologists, nurses, behaviorists, speech-language pathologists, and social workers, and negotiate new bargaining agreements based on the required ratios.
+          <ol type="a" class="sub-points">
+            <li>The district should actively recruit a diverse pool of staff from HBCUs, AANAPISI, and HSIs for these roles. Additionally, the district should hire professionals who specialize in the implementation of Multi-Tiered Systems of Support (MTSS).</li>
+          </ol>
+        </li>
+        <li>All FUSD personnel, starting with mental health professionals, should receive training in cultural competency/reciprocity</li>
+        <li>All mental health professionals and administrators should receive 12-14 hours of training from the Crisis Prevention Institute (CPI). This training should become mandated for all administrators.</li>
+      </ol>
+
+    <p><b>STEP TWO: School Frameworks for Supporting Mental Health Well-Being</b></p>
+
+    <ol class="main-points" start="4">
+      <li>Develop a district-wide plan for proper implementation of the following frameworks <b>with progress monitoring and data-based instructional decisions</b>. This implementation plan should be based on CDE Guidelines for Multi-Tiered Systems of Support (MTSS)</li>
+        <ol type="a" class="sub-points">
+          <li><b>Academic MTSS:</b> Evidence-Based Dyslexia Intervention and Universal Design for Learning (UDL)</li>
+          <li><b>Behavioral MTSS:</b> Culturally Responsive Positive Behavior Intervention Systems and Trauma-Sensitive/ Trauma-Informed Support</li>
+          <li><b>Social Emotional MTSS:</b> Restorative Practices and Restorative Justice and Social-Emotional Learning (SEL)</li>
         </ol>
+    </ol>
 
-        <p>With these actions, we believe that FUSD can begin the long path of embracing and actively encouraging anti-racist practices in its PreK-12 programs and the broader Fremont community. We believe these steps will help FUSD achieve its mission “<a href="https://www.fremont.k12.ca.us/pf4/cms2/view_page?d=x&group_id=1524555033922&vdid=4ia17a1jujp9d2c5" target="_blank">to provide equitable opportunities to Educate, Challenge and Inspire students of all ages, talents and ability levels</a>,” and we look forward to continuing to engage with FUSD as they move towards these reforms.</p>
+  <p><b>STEP THREE: Student, Parent, and Community Engagement</b></p>
 
-        <p class="w3-justify">Signed,</p>
+  <ol class="main-points" start="5">
+    <li>Implement student education initiatives for all K-12 students at all school sites, including: </li>
+      <ol type="a" class="sub-points">
+        <li>Year-round education on mental health awareness and healthy coping strategies</li>
+        <li>Social Emotional Learning curriculum (e.g. Strong Kids, Strong Teens, Everyday Speech, Social Thinking, GIRLS—Girls in Real Life Situations, Kimochis)</li>
+        <li>Peer counseling and conflict resolution training </li>
+        <li>Cultural competency and cultural humility training for students</li>
+      </ol>
 
-        <p class="w3-justify"> {{#Total}} Concerned FUSD Students, Teachers, Alumni, Parents, and Community Members</p>
+     <li>Implement parent and community education initiatives, including: bi-cultural parenting workshops, wellness programs, and workshops on de-stigmatizing mental health that are accessible to English-as-a-second-language (ESL) speakers</li>
+
+     <li>To make mental health literacy more accessible to ESL speakers, mental health information should be posted online and available in the following languages: Spanish, Hindi, Mandarin, Tagalog </li>
+
+     <li>Develop Onsite & Virtual Wellness Centers for the junior high/middle and high schools in each attendance area (e.g. IHS Wellness Center)</li>
+
+     <li>Further expand partnerships with local and regional mental health agencies to broaden support for all students</li>
+
+   </ol>
+
+   <p><b>STEP FOUR: Informed Decision Making and Benchmarks</b></p>
+
+   <ol class="main-points" start="10">
+
+    <li>Create district-wide mental health teams that are <b>facilitated by mental health professionals</b>. These teams should be compensated for their efforts, have clearly defined goals/expectations, and report to the board on a quarterly basis:</li>
+
+    <ol type="a" class="sub-points">
+      <li><b>District Leadership/Mental Health Professional Liaison Team</b> to review school policies and procedures related to mental health and special education and develop implementation plans as needed</li>
+      <li><b>MTSS Implementation Team </b> that is broken down into 3 subteams:</li>
+      <ul>
+        <li>Academic subteam: Implements UDL and Evidence-Based Dyslexia Intervention</li>
+        <li>Behavior subteam: Implements Restorative Practices and Culturally Responsive PBIS</li>
+        <li>Social Emotional subteam: Implements SEL curriculum and mental health awareness education </li>
+      </ul>
+      <li><b>Disability Rights Advisory Team</b> to review policies and disciplinary procedures that systematically affect the educational outcomes of students with disabilities. This team should include members of the Special Education Parent Teachers Association (SEPTA) and Special Education Community Advisory Committee (CAC).
+      </li>
+    </ol>
+
+    <li>Work with the City of Fremont and the school site PTAs to build support for a parcel tax. Collaborate on education initiatives to inform the community on the need for mental health services.</li>
+
+    <li>Create universal, indicated, and selective benchmarks (see footnotes) to assess the implementation of existing and future programs. Report these benchmarks to both the school board and the community at-large on a quarterly basis. </li>
+
+    </ol>
+
+    <p>With the end goal of bettering our school environment and improving the well-being of our students, we urge district management, school board trustees, and city leadership to assume liability and invest in these recommendations, which emphasize prevention and continued support. </p>
+
+    <p>We recognize that steps 1 and 2 of the recommendations will require more resources to implement. We ask that the district implement steps 3 and 4 of the recommendations immediately and commit to gradually implementing steps 1 and 2 of the recommendations. </p>
+
+    <p>Again, this petition and its recommendations will be discussed in depth at our Mental Health Town Hall meeting on January 3rd at 5pm, which you can register for at <b><a href="https://bit.ly/mhth-reg" target="_blank">bit.ly/mhth-reg</a></b>.</p>
+
+    <p>Thank you for signing on and showing your support for our students. </p>
+
+
+      <p class="w3-justify">Signed,</p>
+
+      <p class="w3-justify">{{#Total}} Students, Alumni, Parents, Educators, and Community Members</p>
 
       </div>
 
@@ -177,12 +228,12 @@
         <a href="#sign"><button class="w3-btn w3-round-xxlarge w3-black w3-large w3-justify">Sign the Petition</button></a>
       </div>
       <div class="share-bar">
-        <div class="fb-share-button" data-href="https://bit.ly/fusdantiracism" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdantiracism&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <div class="fb-share-button" data-href="https://bit.ly/fusdstrong" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdstrong&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition asking FUSD to incorporate anti-racism education into their K-12 curriculum!" data-url="https://bit.ly/fusdantiracism" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition for FUSD to implement greater mental health resources!" data-url="https://bit.ly/fusdstrong" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
         <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-        <script type="IN/Share" data-url="https://bit.ly/fusdantiracism"></script>
+        <script type="IN/Share" data-url="https://bit.ly/fusdstrong"></script>
       </div>
 
       <br>
@@ -195,10 +246,10 @@
         Signatories:&nbsp;&nbsp;&nbsp;<a href="#comments"><button class="w3-btn w3-round-xxlarge w3-black w3-medium w3-justify" style="margin-right: 10px">Read the Comments</button></a>
       </h2>
 
-      <h4>Organizations</h4>
+      <h4>{{#Organizations}} Organizations</h4>
       <div class="w3-center">
         <table style="margin-left:auto; margin-right:auto">
-          <tr><td>Fremont Unified District Teachers Association</td></tr>
+          {{OrganizationsList}}
         </table>
       </div>
 
@@ -209,7 +260,7 @@
         </table>
       </div>
 
-      <h4>{{#Teachers}} FUSD Teachers, Administration, or Staff</h4>
+      <h4>{{#Teachers}} FUSD Employees</h4>
       <div class="w3-center">
         <table style="margin-left:auto; margin-right:auto">
           {{TeachersList}}
@@ -237,6 +288,13 @@
         </table>
       </div>
 
+      <h4>{{#ElectedOfficials}} Elected Officials</h4>
+      <div class="w3-center">
+        <table style="margin-left:auto; margin-right:auto">
+          {{ElectedOfficialsList}}
+        </table>
+      </div>
+
       <h4>{{#Other}} Other</h4>
       <div class="w3-center">
         <table style="margin-left:auto; margin-right:auto">
@@ -250,7 +308,7 @@
     <!-- Signature Section -->
     <div class="w3-center" style="padding:64px 16px" id="sign">
       <h3 class="w3-center">Add Your Name</h3>
-    <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhynWAZkGk80kBqUTcDcD_pWGXqYjidLP4w727P-Is-yClCg/viewform?embedded=true" max-width="748" height="692" width="100%" frameborder="0" marginwidth="0" marginheight="0">Loading&#8230;</iframe></p>
+    <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWT311eD9g5Gx47Z8a8xyyHdpXtN-1TWRI4bspko2mpK8MYg/viewform?embedded=true" width="640" height="1840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
     </div>
 
     <!-- Comments Section -->
@@ -265,17 +323,17 @@
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64">
       <div class="share-bar">
-        <div class="fb-share-button" data-href="https://bit.ly/fusdantiracism" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdantiracism&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <div class="fb-share-button" data-href="https://bit.ly/fusdstrong" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbit.ly%2Ffusdstrong&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition asking FUSD to incorporate anti-racism education into their K-12 curriculum!" data-url="https://bit.ly/fusdantiracism" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Please sign and share this petition for FUSD to implement greater mental health resources!" data-url="https://bit.ly/fusdstrong" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         &nbsp&nbsp&nbsp&nbsp<!-- <br/><br/> -->
         <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-        <script type="IN/Share" data-url="https://bit.ly/fusdantiracism"></script>
+        <script type="IN/Share" data-url="https://bit.ly/fusdstrong"></script>
       </div>
       <br>
       <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-      <p>For more information, contact: <a href="mailto:fusdantiracism@gmail.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">fusdantiracism@gmail.com</a></p>
-      <p>Website design adapted from <a href="https://nojusticenorobots.github.io/" title="W3.CSS" target="_blank" class="w3-hover-text-green">No Justice No Robots</a></p>
+      <p>For more information, contact: <a href="mailto:alee@generationup.net" title="W3.CSS" target="_blank" class="w3-hover-text-green">alee@generationup.net</a></p>
+      <p>Website design adapted from <a href="https://fusdantiracism.github.io/" title="W3.CSS" target="_blank" class="w3-hover-text-green">FUSD: Anti-Racism Now</a></p>
         <!-- <p>#BlackLivesMatter</p> -->
     </footer>
 

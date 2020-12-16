@@ -5,11 +5,11 @@ import traceback
 
 def processCSV(filepath):
     nameCol = 1
-    fusdAffiliationCol = 2
-    schoolAffiliationCol = 3
-    yearCol = 4
-    otherAffiliationCol = 5
-    commentCol = 6
+    fusdAffiliationCol = 3
+    schoolAffiliationCol = 4
+    yearCol = 5
+    otherAffiliationCol = 6
+    commentCol = 7
 
     signatoriesByFUSDAffiliation = {}
     rawData = []
@@ -50,32 +50,32 @@ def processCSV(filepath):
                 print("HTML Cross-Site Scripting attack comment", comment)
                 comment = ""
 
-            # Correct anomalous form entries that mess up the webpage design
-            if "Would have graduated 2014, left school in 2011" in year:
-                otherAffiliation = year
-                year = "2011"
-            if "2014, 2015,  2018;  Kids suffered all the abuses from racist teachers." in year:
-                otherAffiliation = year
-                year = "2018"
-            if otherAffiliation.lower().strip() in ["no", "n/a", "na", "none", "diversify the admin & teachers-need multi-ethnic group to match the student body in the school of attendance.", "alek gent-vincent"]:
-                otherAffiliation = ""
-            if comment.lower().strip()  in ["no", "n/a", "na", "none", "aaryan rustagi", "yes", "diya", "not as of now!!"]:
-                comment = ""
-            if comment.strip() == "Retired teacher":
-                otherAffiliation = "Retired teacher"
-                comment = ""
-            if year == "202,120,222,026":
-                year = "2021,2022,2026"
-            if year == "Mission San Jose High 2023":
-                year = "2023"
-            if year == "i graduated from MSJ in FUSD in 1998.  I am currently a teacher for FUSD.":
-                year = "(MSJHS 1998)"
-            if year.lower().strip() == "n/a":
-                year = ""
-            if otherAffiliation == "Only my name":
-                otherAffiliation = ""
-            if comment == "Not as of now!!":
-                comment = ""
+            # # Correct anomalous form entries that mess up the webpage design
+            # if "Would have graduated 2014, left school in 2011" in year:
+            #     otherAffiliation = year
+            #     year = "2011"
+            # if "2014, 2015,  2018;  Kids suffered all the abuses from racist teachers." in year:
+            #     otherAffiliation = year
+            #     year = "2018"
+            # if otherAffiliation.lower().strip() in ["no", "n/a", "na", "none", "diversify the admin & teachers-need multi-ethnic group to match the student body in the school of attendance.", "alek gent-vincent"]:
+            #     otherAffiliation = ""
+            # if comment.lower().strip()  in ["no", "n/a", "na", "none", "aaryan rustagi", "yes", "diya", "not as of now!!"]:
+            #     comment = ""
+            # if comment.strip() == "Retired teacher":
+            #     otherAffiliation = "Retired teacher"
+            #     comment = ""
+            # if year == "202,120,222,026":
+            #     year = "2021,2022,2026"
+            # if year == "Mission San Jose High 2023":
+            #     year = "2023"
+            # if year == "i graduated from MSJ in FUSD in 1998.  I am currently a teacher for FUSD.":
+            #     year = "(MSJHS 1998)"
+            # if year.lower().strip() == "n/a":
+            #     year = ""
+            # if otherAffiliation == "Only my name":
+            #     otherAffiliation = ""
+            # if comment == "Not as of now!!":
+            #     comment = ""
 
             name = html.escape(name)
             school = html.escape(school)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     minNumSig = 1
     numSigCols = 2
 
-    signatoriesByFUSDAffiliation, numSignatories, otherAffiliationData, commentBlocks, rawData = processCSV("FUSD Anti-Racism Petition (Responses) - Form Responses 1.csv")
+    signatoriesByFUSDAffiliation, numSignatories, otherAffiliationData, commentBlocks, rawData = processCSV("FUSD Mental Health Petition (Responses).csv")
     print(signatoriesByFUSDAffiliation)
 
     with open("template.template", "r") as templateFile:
@@ -170,23 +170,23 @@ if __name__ == "__main__":
                             # for row in signatoriesByFUSDAffiliation["FUSD Student"]:
                             #     finalLines.append(row)
                     elif (templateElement == "{{#Teachers}}"):
-                        num = len(signatoriesByFUSDAffiliation["FUSD Teacher, Administration, or Staff (current or former)"]) if "FUSD Teacher, Administration, or Staff (current or former)" in signatoriesByFUSDAffiliation else 0
+                        num = len(signatoriesByFUSDAffiliation["FUSD Employee (current or former)"]) if "FUSD Employee (current or former)" in signatoriesByFUSDAffiliation else 0
                         if num < minNumSig:
                             finalLines = [beforeTemplateElement + afterTemplateElement]
                         else:
                             finalLines = [beforeTemplateElement + str(num) + afterTemplateElement]
                     elif (templateElement == "{{TeachersList}}"):
-                        if ("FUSD Teacher, Administration, or Staff (current or former)" in signatoriesByFUSDAffiliation):
-                            for i in range(0, len(signatoriesByFUSDAffiliation["FUSD Teacher, Administration, or Staff (current or former)"]), numSigCols):
+                        if ("FUSD Employee (current or former)" in signatoriesByFUSDAffiliation):
+                            for i in range(0, len(signatoriesByFUSDAffiliation["FUSD Employee (current or former)"]), numSigCols):
                                 row = "<tr>"
                                 for k in range(numSigCols):
-                                    if i+k < len(signatoriesByFUSDAffiliation["FUSD Teacher, Administration, or Staff (current or former)"]):
-                                        row += signatoriesByFUSDAffiliation["FUSD Teacher, Administration, or Staff (current or former)"][i+k]
+                                    if i+k < len(signatoriesByFUSDAffiliation["FUSD Employee (current or former)"]):
+                                        row += signatoriesByFUSDAffiliation["FUSD Employee (current or former)"][i+k]
                                     else:
                                         row += "<td></td>"
                                 row += "</tr>"
                                 finalLines.append(row)
-                            # for row in signatoriesByFUSDAffiliation["FUSD Teacher, Administration, or Staff (current or former)"]:
+                            # for row in signatoriesByFUSDAffiliation["FUSD Employee (current or former)"]:
                             #     finalLines.append(row)
                     elif (templateElement == "{{#Alumni}}"):
                         num = len(signatoriesByFUSDAffiliation["FUSD Alumni"]) if "FUSD Alumni" in signatoriesByFUSDAffiliation else 0
@@ -226,24 +226,63 @@ if __name__ == "__main__":
                                 finalLines.append(row)
                             # for row in signatoriesByFUSDAffiliation["FUSD Parent"]:
                             #     finalLines.append(row)
-                    elif (templateElement == "{{#FremontCommunityMembers}}"):
-                        num = len(signatoriesByFUSDAffiliation["Fremont Community Member"]) if "Fremont Community Member" in signatoriesByFUSDAffiliation else 0
+                    elif (templateElement == "{{#CommunityMembers}}"):
+                        num = len(signatoriesByFUSDAffiliation["Community Member"]) if "Community Member" in signatoriesByFUSDAffiliation else 0
                         if num < minNumSig:
                             finalLines = [beforeTemplateElement + afterTemplateElement]
                         else:
                             finalLines = [beforeTemplateElement + str(num) + afterTemplateElement]
-                    elif (templateElement == "{{FremontCommunityMembersList}}"):
-                        if ("Fremont Community Member" in signatoriesByFUSDAffiliation):
-                            for i in range(0, len(signatoriesByFUSDAffiliation["Fremont Community Member"]), numSigCols):
+                    elif (templateElement == "{{CommunityMembersList}}"):
+                        if ("Community Member" in signatoriesByFUSDAffiliation):
+                            for i in range(0, len(signatoriesByFUSDAffiliation["Community Member"]), numSigCols):
                                 row = "<tr>"
                                 for k in range(numSigCols):
-                                    if i+k < len(signatoriesByFUSDAffiliation["Fremont Community Member"]):
-                                        row += signatoriesByFUSDAffiliation["Fremont Community Member"][i+k]
+                                    if i+k < len(signatoriesByFUSDAffiliation["Community Member"]):
+                                        row += signatoriesByFUSDAffiliation["Community Member"][i+k]
                                     else:
                                         row += "<td></td>"
                                 row += "</tr>"
                                 finalLines.append(row)
-                            # for row in signatoriesByFUSDAffiliation["Fremont Community Member"]:
+                            # for row in signatoriesByFUSDAffiliation["Community Member"]:
+                            #     finalLines.append(row)
+                    elif (templateElement == "{{#ElectedOfficials}}"):
+                        num = len(signatoriesByFUSDAffiliation["Elected Official"]) if "Elected Official" in signatoriesByFUSDAffiliation else 0
+                        if num < minNumSig:
+                            finalLines = [beforeTemplateElement + afterTemplateElement]
+                        else:
+                            finalLines = [beforeTemplateElement + str(num) + afterTemplateElement]
+                    elif (templateElement == "{{ElectedOfficialsList}}"):
+                        if ("Elected Official" in signatoriesByFUSDAffiliation):
+                            for i in range(0, len(signatoriesByFUSDAffiliation["Elected Official"]), numSigCols):
+                                row = "<tr>"
+                                for k in range(numSigCols):
+                                    if i+k < len(signatoriesByFUSDAffiliation["Elected Official"]):
+                                        row += signatoriesByFUSDAffiliation["Elected Official"][i+k]
+                                    else:
+                                        row += "<td></td>"
+                                row += "</tr>"
+                                finalLines.append(row)
+                            # for row in signatoriesByFUSDAffiliation["Elected Official"]:
+                            #     finalLines.append(row)
+
+                    elif (templateElement == "{{#Organizations}}"):
+                        num = len(signatoriesByFUSDAffiliation["Organization"]) if "Organization" in signatoriesByFUSDAffiliation else 0
+                        if num < minNumSig:
+                            finalLines = [beforeTemplateElement + afterTemplateElement]
+                        else:
+                            finalLines = [beforeTemplateElement + str(num) + afterTemplateElement]
+                    elif (templateElement == "{{OrganizationsList}}"):
+                        if ("Organization" in signatoriesByFUSDAffiliation):
+                            for i in range(0, len(signatoriesByFUSDAffiliation["Organization"]), numSigCols):
+                                row = "<tr>"
+                                for k in range(numSigCols):
+                                    if i+k < len(signatoriesByFUSDAffiliation["Organization"]):
+                                        row += signatoriesByFUSDAffiliation["Organization"][i+k]
+                                    else:
+                                        row += "<td></td>"
+                                row += "</tr>"
+                                finalLines.append(row)
+                            # for row in signatoriesByFUSDAffiliation["Organization"]:
                             #     finalLines.append(row)
                     elif (templateElement == "{{#Other}}"):
                         num = len(signatoriesByFUSDAffiliation["Other"]) if "Other" in signatoriesByFUSDAffiliation else 0
@@ -280,10 +319,10 @@ if __name__ == "__main__":
     # Save pie charts
     try:
         # affiliationLabels = [affiliation for affiliation in signatoriesByFUSDAffiliation]
-        affiliationLabels = ["FUSD Teacher, Administration, or Staff (current or former)", "FUSD Student", "FUSD Parent", "Other", "FUSD Alumni", "Fremont Community Member"]
-        affiliationCount = [len(signatoriesByFUSDAffiliation[affiliation]) for affiliation in affiliationLabels]
+        affiliationLabels = ["FUSD Employee (current or former)", "FUSD Student", "FUSD Parent", "Other", "FUSD Alumni", "Community Member", "Elected Official", "Organization"]
+        affiliationCount = [len(signatoriesByFUSDAffiliation[affiliation]) if affiliation in signatoriesByFUSDAffiliation else 0 for affiliation in affiliationLabels]
         totalCount = sum(affiliationCount)
-        affiliationLabels[0] = "FUSD Teacher, Administration, \nor Staff (current or former)"
+        affiliationLabels[0] = "FUSD Employee (current or former)"
 
         def printPercent(pct):
             count = int(round(totalCount*pct/100))
@@ -362,7 +401,7 @@ if __name__ == "__main__":
 
         attendanceAreaLabels = [attendanceArea for attendanceArea in attendanceAreaLabelToCount]
         attendanceAreaLabels = ["Irvington High School", "Kennedy High School", "Washington High School", "American High School", "Mission San Jose High School", "Other"]
-        attendanceAreaCount = [attendanceAreaLabelToCount[attendanceArea] for attendanceArea in attendanceAreaLabels]
+        attendanceAreaCount = [attendanceAreaLabelToCount[attendanceArea] if attendanceArea in attendanceAreaLabelToCount else 0 for attendanceArea in attendanceAreaLabels]
         totalCount = sum(attendanceAreaCount)
 
         def printPercent(pct):
