@@ -226,13 +226,13 @@ if __name__ == "__main__":
                                 finalLines.append(row)
                             # for row in signatoriesByFUSDAffiliation["FUSD Parent"]:
                             #     finalLines.append(row)
-                    elif (templateElement == "{{#CommunityMembers}}"):
+                    elif (templateElement == "{{#FremontCommunityMembers}}"):
                         num = len(signatoriesByFUSDAffiliation["Community Member"]) if "Community Member" in signatoriesByFUSDAffiliation else 0
                         if num < minNumSig:
                             finalLines = [beforeTemplateElement + afterTemplateElement]
                         else:
                             finalLines = [beforeTemplateElement + str(num) + afterTemplateElement]
-                    elif (templateElement == "{{CommunityMembersList}}"):
+                    elif (templateElement == "{{FremontCommunityMembersList}}"):
                         if ("Community Member" in signatoriesByFUSDAffiliation):
                             for i in range(0, len(signatoriesByFUSDAffiliation["Community Member"]), numSigCols):
                                 row = "<tr>"
